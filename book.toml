@@ -1,0 +1,8 @@
+
+[book]
+title = "Quamolit"
+authors = [ "Jon" ]
+
+[output.html]
+
+[output.linkcheck]
