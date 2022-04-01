@@ -1,9 +1,11 @@
 
 # `arc`
 
-```
+```cirru
 arc $ {}
-  :x 0 :y 0:r 40
+  :x 0
+  :y 0
+  :r 40
   :s-angle 0
   :e-angle 60
   :line-width 4

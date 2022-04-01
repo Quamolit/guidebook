@@ -1,6 +1,6 @@
 # `line`
 
-```
+```cirru
 line $ {}
   :x0 0
   :y0 0
