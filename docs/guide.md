@@ -23,7 +23,7 @@ Seeing from MVC, animations has Models too. Said by FRP(Functional Reactive Prog
 
 Define components:
 
-```
+```cirru
 defcomp comp-demo ()
   group ({})
 

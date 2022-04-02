@@ -1,7 +1,7 @@
 
 # `rect`
 
-```
+```cirru
 rect $ {}
   :w 100
   :h 40

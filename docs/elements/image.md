@@ -1,6 +1,6 @@
 # `image`
 
-```
+```cirru
 image $ {}
   :src "|lotus.jpg"
   :sx 0

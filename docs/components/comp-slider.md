@@ -1,7 +1,7 @@
 
 # `comp-slider`
 
-```
+```cirru
 comp-slider (>> states :v)
   {}
     :value $ :v state
