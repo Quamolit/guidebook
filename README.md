@@ -33,8 +33,9 @@ Speech package are removed. Styles come from the versioned Caps module.
 recoverable from Git history. Generated `js-out` is not tracked. CI builds both
 the frontend and mdBook; COS verification uses only the action's built-in
 public URL check. PR uploads are isolated and never rsync. Both original server
-destinations and `mdbook.html` are preserved. Remote CI, mdBook/upload checks,
-review and production deployment remain to be accepted. Historical code blocks
+destinations and `mdbook.html` are preserved. Current formal CI, mdBook/upload
+and browser evidence is recorded in the migration PR; review and production
+deployment are separate acceptance decisions. Historical code blocks
 inside the documentation still need their own API migration review.
 
 The 0.30.1 candidate migrates internal Option helpers to public methods, checks
