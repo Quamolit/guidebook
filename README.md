@@ -46,6 +46,6 @@ The original `hud!` error/success display is retained, not replaced with raise.
 
 CI retains existing gates and adds public namespace and full strict checks.
 PR artifacts preserve both original frontend outputs for actual acceptance.
-Temporary formal-CLI migration inputs must be removed before final clean CI.
+Temporary formal-CLI migration inputs have been removed before final clean CI.
 The introductory guide retires its incomplete ticking example and retired runner
 commands, without claiming the separate Quamolit library/template is migrated.
