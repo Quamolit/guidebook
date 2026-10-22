@@ -49,3 +49,6 @@ PR artifacts preserve both original frontend outputs for actual acceptance.
 Temporary formal-CLI migration inputs have been removed before final clean CI.
 The introductory guide retires its incomplete ticking example and retired runner
 commands, without claiming the separate Quamolit library/template is migrated.
+It explicitly labels these pages as historical Canvas DSL documentation and
+links the upstream's current API/migration contract; the current guarded alpha
+motion API does not make experimental renderer/resource APIs stable.
