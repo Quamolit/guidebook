@@ -51,8 +51,9 @@ signature into a current application without checking its actual contract.
 
 ### Develop this documentation site
 
-This site uses paired formal Calcit/procs 0.30.1 and the published Docs Workflow
-dependency. Use the current Calcit CLI, not the retired `cr`/calcit_runner command:
+This site targets paired formal Calcit/procs 0.32.0 and the Docs Workflow
+0.0.40 candidate. Local candidate checks do not establish a published dependency
+graph; clean Caps installation and PR CI must follow upstream publication. Use the current Calcit CLI, not the retired `cr`/calcit_runner command:
 
 ```bash
 caps --strict --ci

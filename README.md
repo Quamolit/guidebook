@@ -11,7 +11,26 @@ mdbook serve
 
 MIT
 
-### Calcit migration
+### 本轮升级影响
+
+文档站候选配对正式 Calcit CLI / `@calcit/procs` **0.32.0** 与 Docs Workflow **0.0.40** 候选。
+当前仅使用本地候选模块联合验证；尚未证明已发布依赖图的 Caps strict 安装，须等上游 tag
+发布后再验证干净安装和 PR CI。升级后重装依赖并刷新页面，UI 样式可能有差异。
+
+官方 formatter 转换 4 处旧类型形式，13 个定义的 schema 保持。默认 entry 显式绑定
+`dispatch-op :dynamic`，对应原 renderer 的 `Dynamic → Unit` 宿主合同；非 Enum 拒绝和
+业务 payload 检查保持。保留 `hud!` 页面错误提示，不增加强转或放宽类型门禁。
+原文档节点层级、60 秒 Map 存档写入和禁用的恢复行为保持；不宣称刷新恢复存档。
+
+使用 Node 24、Yarn 4.18.0；依赖等待期统一为一小时，无按版本豁免。
+项目没有附带测试；完整 strict、公开 namespace 和双前端构建不能代替实际页面验收。
+历史 Canvas DSL 文档不代表新版 Quamolit 库和模板已通过 0.32.0 验收。
+不生成 compact/package.cirru，不提交 js-out；原 COS 内置 verify、PR 隔离前缀、
+两个前端服务器目标和 mdbook.html 保持。本轮不合并、部署或发版。
+
+### 先前迁移记录
+
+以下 0.30.1 内容描述先前迁移，不作为本轮依赖图验收证据。
 
 This candidate targets formal Calcit/procs 0.30.1 and published Docs Workflow 0.0.37,
 installed through a strict, versioned Caps dependency graph. The local package

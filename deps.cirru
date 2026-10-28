@@ -1,4 +1,4 @@
 {}
   :version |0.0.1
-  :calcit-version |0.30.1
-  :dependencies $ {} (|calcit-lang/docs-workflow |0.0.37)
+  :calcit-version |0.32.0
+  :dependencies $ {} (|calcit-lang/docs-workflow |0.0.40)
