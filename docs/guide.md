@@ -4,9 +4,9 @@ This guidebook documents the **legacy Canvas DSL**, not the current renderer's
 stable API. For new development, read the maintained
 [Quamolit README](https://github.com/Quamolit/quamolit#readme) and
 [API stability and migration contract](https://github.com/Quamolit/quamolit/blob/main/docs/api-contract.md).
-The upstream currently guards only its `quamolit.ui-motion` alpha contract;
-renderer/resource APIs remain experimental. Upgrading this documentation site's
-Calcit toolchain does not publish a new Quamolit version or stabilize those APIs.
+Consult the matching library version's contract for stability guarantees and
+experimental API boundaries. Upgrading this documentation site's Calcit toolchain
+does not publish a new Quamolit version or stabilize its APIs.
 
 > what if we describe UI transitions in React's way? Previously written in [ClojureScript](https://github.com/Quamolit/quamolit.cljs).
 
@@ -51,9 +51,10 @@ signature into a current application without checking its actual contract.
 
 ### Develop this documentation site
 
-This site targets paired formal Calcit/procs 0.32.0 and the Docs Workflow
-0.0.40 candidate. Local candidate checks do not establish a published dependency
-graph; clean Caps installation and PR CI must follow upstream publication. Use the current Calcit CLI, not the retired `cr`/calcit_runner command:
+This site targets paired formal Calcit/procs 0.32.1 and published Docs Workflow
+0.0.40. Install the complete versioned module graph with strict Caps; several
+transitive modules still use fixed alpha tags. Use the current Calcit CLI,
+not the retired `cr`/calcit_runner command:
 
 ```bash
 caps --strict --ci
