@@ -11,7 +11,31 @@ mdbook serve
 
 MIT
 
-### Calcit migration
+### 本轮升级影响
+
+文档站配对正式 Calcit CLI / `@calcit/procs` **0.32.1** 与已发布 Docs Workflow **0.0.40**。
+请重新安装完整模块图、生成 JS 并刷新页面，UI 样式可能有差异。严格 Caps 已安装八个已发布模块，
+不再使用本地候选模块；共享依赖仍固定部分 alpha tag，不宣称整张模块图均为稳定版。
+
+官方 formatter 转换 4 处旧类型形式，13 个定义的 schema 保持。默认 entry 显式绑定
+`dispatch-op :dynamic`，对应原 renderer 的 `Dynamic → Unit` 宿主合同；非 Enum 拒绝和
+业务 payload 检查保持。保留 `hud!` 页面错误提示，不增加强转或放宽类型门禁。
+原文档节点层级、60 秒 Map 存档写入和禁用的恢复行为保持；不宣称刷新恢复存档。
+
+使用 Node 24、Yarn 4.18.0；依赖等待期统一为一小时，无按版本豁免。
+240 个可达定义、13 个公开定义、完整 strict、不可变安装、工具链配对和 Vite/mdBook 构建通过。
+项目没有附带测试，不新增空测试或额外验证框架。实际 SPA 的 Components/Button、快速跳转到 Rect、
+Escape 关闭与刷新回 Guide 通过；原 mdbook.html 入口及 Button 深层链接通过。
+SPA 无警告或错误；mdBook 缺少 Cirru 语言注册，代码块回退为纯文本并报警，见
+[#6](https://github.com/Quamolit/guidebook/issues/6)。不把这个已知问题写成高亮验收通过。
+本轮未操作剪贴板、真实存档或外部应用，远端 CI 结果另记于 PR。
+历史 Canvas DSL 文档不代表新版 Quamolit 库和模板已通过 0.32.1 验收。
+不生成 compact/package.cirru，不提交 js-out；原 COS 内置 verify、PR 隔离前缀、
+两个前端服务器目标和 mdbook.html 保持。本轮不合并、部署或发版。
+
+### 先前迁移记录
+
+以下 0.30.1 内容描述先前迁移，不作为本轮依赖图验收证据。
 
 This candidate targets formal Calcit/procs 0.30.1 and published Docs Workflow 0.0.37,
 installed through a strict, versioned Caps dependency graph. The local package
