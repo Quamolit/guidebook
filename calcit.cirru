@@ -6,7 +6,7 @@
     {} (:description |) (:init-fn 'app.main/main!) (:mode :js) (:reload-fn 'app.main/reload!) (:target :browser)
       :feature-policy $ {}
       :modules $ [] |respo.calcit/ |respo-ui.calcit/ |respo-markdown.calcit/ |reel.calcit/ |respo-router.calcit/ |alerts.calcit/ |docs-workflow/
-      :type-slots $ {} $ :dispatch-op 'Dynamic
+      :type-slots $ {} $ :dispatch-op 'docs-workflow.schema/Op
   :files $ {}
     'app.config $ %{} 'FileEntry
       :defs $ {}
@@ -44,7 +44,7 @@
                     match op
                       (:states cursor data)
                         match
-                          try-decode-map-as cursor $ :: 'List 'Dynamic
+                          try-decode-map-as cursor $ List respo.schema/CoordKey
                           (:ok checked-cursor) (docs-workflow.schema/Op :states checked-cursor data)
                           (:err message) (raise message)
                       (:hydrate-storage data)
@@ -59,7 +59,7 @@
                     :timestamp $ shared/date-now-snapshot
             , &unit
           :examples $ []
-          :schema $ quote $ Fn Enum (-> Unit) (:features :js-ffi)
+          :schema $ quote $ Fn AnyEnum (-> Unit) (:features :js-ffi)
         'main! $ %{} 'CodeEntry (:doc |)
           :code $ quote $ defn main! () (register-languages!)
             println "|Running mode:" $ if config/dev? |dev |release
@@ -108,17 +108,15 @@
           :schema $ quote $ Fn (-> Unit) (:features :js-ffi)
         'render-app! $ %{} 'CodeEntry (:doc |)
           :code $ quote $ defn render-app! ()
-            render! (mount-target) (comp-container @*reel schema/docs)
-              fn (op)
-                hint-fn $ Fn Dynamic (-> Unit) (:features :js-ffi)
-                if (enum? op) (dispatch! op) (raise "|Expected an Enum render action")
-                , &unit
+            render-with! (mount-target)
+              fn () $ comp-container @*reel schema/docs
+              , dispatch!
           :examples $ []
           :schema $ quote $ Fn (-> Unit) (:features :js-ffi)
       :ns $ %{} 'NsEntry (:doc |)
         :code $ quote $ ns app.main
           :require
-            respo.core :refer $ render! clear-cache!
+            respo.core :refer $ render-with! clear-cache!
             docs-workflow.comp.container :refer $ comp-container
             app.updater :refer $ updater
             app.schema :as schema
