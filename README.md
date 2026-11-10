@@ -11,7 +11,11 @@ mdbook serve
 
 MIT
 
-### 本轮升级影响
+### Calcit 0.40.0 升级
+
+开发使用配对的 Calcit CLI 和 `@calcit/procs` 0.40.0。文档导航通过具名 `docs-workflow.schema/Op` 派发。Reel 0.11 的面板和快捷键使用独立的 `reel.typed/Control` 回调，由 Docs Workflow 0.1.0 的组件接收。
+
+### Calcit 0.32.1 迁移记录
 
 文档站配对正式 Calcit CLI / `@calcit/procs` **0.32.1** 与已发布 Docs Workflow **0.0.40**。
 请重新安装完整模块图、生成 JS 并刷新页面，UI 样式可能有差异。严格 Caps 已安装八个已发布模块，
