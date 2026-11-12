@@ -1,6 +1,6 @@
 {}
   :version |0.0.1
-  :calcit-version |0.41.1
+  :calcit-version |0.42.1
   :dependencies $ {} (|Respo/alerts.calcit |0.14.3)
     |Respo/reel.calcit |0.11.0
     |Respo/respo-markdown.calcit |0.8.2
