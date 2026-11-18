@@ -51,9 +51,8 @@ signature into a current application without checking its actual contract.
 
 ### Develop this documentation site
 
-This site targets paired formal Calcit/procs 0.32.1 and published Docs Workflow
-0.0.40. Install the complete versioned module graph with strict Caps; several
-transitive modules still use fixed alpha tags. Use the current Calcit CLI,
+This site targets paired formal Calcit/procs 0.43.0 and published Docs Workflow
+0.1.1. Install the complete formal module graph with strict Caps. Use the current Calcit CLI,
 not the retired `cr`/calcit_runner command:
 
 ```bash
