@@ -13,7 +13,7 @@ MIT
 
 ### Calcit 0.44.0 升级
 
-开发使用配对的 Calcit CLI 和 `@calcit/procs` 0.44.0。文档导航通过具名 `docs-workflow.schema/Op` 派发。Reel 0.11 的面板和快捷键使用独立的 `reel.typed/Control` 回调，由 Docs Workflow 0.1.2 的组件接收。
+开发使用配对的 Calcit CLI 和 `@calcit/procs` 0.44.0。文档导航通过具名 `docs-workflow.schema/Op` 派发。Reel 0.11 的面板和快捷键使用独立的 `reel.typed/Control` 回调，由 Docs Workflow 0.1.3 的组件接收。更新后请重装依赖并重建；UI 可能有样式差异，本次未重新验收浏览器交互。
 
 ### Calcit 0.32.1 迁移记录
 
